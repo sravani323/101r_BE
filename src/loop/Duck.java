@@ -21,6 +21,7 @@ public class Duck {
     }else {
     	System.out.println("! Duck number");
     }
+    sc.close();;
     
 	}
 
