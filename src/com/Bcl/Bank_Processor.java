@@ -1,20 +1,32 @@
 package com.Bcl;
+import java.util.*;
 
 public class Bank_Processor {
 
 	public static void main(String[] args) {
-		Bank_Account obj=new Bank_Account(123,"sravani",30000);
-		System.out.println("Bank number:"+obj.getAccountNumber());
-		System.out.println("Bank Holder:"+obj.getAccountHolder());
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the ID:");
+		int empid=sc.nextInt();
+		System.out.print("Enter the account Holder:");
+		String name=sc.next();
+		System.out.print("Enter the balance");
+		double balance=sc.nextDouble();
+		
+		Bank_Account obj=new Bank_Account(empid,name,balance);
+		
 		System.out.println("Bank Balance:"+obj.getBalance());
 		
-		 System.out.println(" Deposit Operations ");
-		obj.desposit(1000);
+		 System.out.println("-------------------------- ");
+		 System.out.print("Enter the desposit:");
+		 double desposit=sc.nextDouble();
+		obj.desposit(desposit);
 		System.out.println("Balance  : " + obj.getBalance());
 		
-		 System.out.println(" Withdrawal Operations ");
+		 System.out.println("--------------------");
+		 System.out.print("enter the withdrawal:");
+		 double wtd=sc.nextDouble();
 
-        obj.withdraw(5000);
+        obj.withdraw(wtd);
 
         System.out.println("Balance : " + obj.getBalance());
 		

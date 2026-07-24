@@ -38,7 +38,7 @@ public void desposit(double amount) {
 public void withdraw(double amount) {
 	 if (amount <= 0) {
 	        System.out.println("Withdrawal amount must be greater than 0");
-	    } else if (balance >= amount) {
+	    } else if (balance >= amount&&amount>0) {
 	        balance = balance - amount;
 	    } else {
 	        System.out.println("Insufficient balance");

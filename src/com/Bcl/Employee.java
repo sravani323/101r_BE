@@ -47,11 +47,12 @@ int performanceRating;
 	return performanceRating;
  }
 
-public  void promoteEmployee() {
+public  void promoteEmployee(String desg) {
 	if (performanceRating >= 4) {
-		   System.out.println("After Promotion:");
-        current_designation = "Senior Developer";
-        salary = salary + (salary * 20 / 100);
+		  
+		   salary = salary + (salary * 20 / 100);
+		   System.out.println("Update employee salary"+salary);
+          current_designation = desg;
     }
 	else {
 		System.out.println("not promoted");
